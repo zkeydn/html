@@ -9,9 +9,9 @@
 <h2>購物車金額：<span id="total">0</span> 元</h2>
 <button onclick="clearCart()">清空購物車</button>
 
-<!-- 商品區 -->
+
 <div>
-  <!-- 商品1：雞肉飯 -->
+ 
   <div>
     <h3>雞肉飯 - 100 元</h3>
     <img src="https://i.postimg.cc/zX64yQz9/temp-Imageg-Dk9-HG.avif" alt="雞肉飯" width="150">
@@ -31,21 +31,21 @@
 </div>
 
 <script>
-  // 初始化
+ 
   let total = 0;
 
-  // 如果 localStorage 有儲存金額就載入
+  
   if (localStorage.getItem("cartTotal")) {
     total = parseInt(localStorage.getItem("cartTotal"));
     document.getElementById("total").innerText = total;
   }
 
-  // 加入購物車
+  
   function addToCart(price) {
     total += price;
     document.getElementById("total").innerText = total;
-    console.log("目前金額：" + total); // 顯示在 console
-    localStorage.setItem("cartTotal", total); // 存到 localStorage
+    console.log("目前金額：" + total); 
+    localStorage.setItem("cartTotal", total); 
   }
 
 
